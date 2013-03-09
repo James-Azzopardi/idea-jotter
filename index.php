@@ -67,8 +67,7 @@
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
                 <h1>Jitter Jotter!</h1>
-                <p>This is an application for jotting down your lists and ideas, in a couple of quick easy steps 
-                    template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p>This is an application for jotting down your lists and ideas, in a couple of quick easy steps </p>
                 <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
             </div>
 
@@ -98,7 +97,19 @@
             </footer>
 
         </div> <!-- /container -->
+        <script>
+            var Router = Backbone.Router.extend({
+                routes:{
+                    '': 'home'
+                }
+            });
+            var router = new Router();
+            router.on('router:home', function(){
+                console.log('Home');
+            });
 
+            Backbone.history.start();
+        </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
